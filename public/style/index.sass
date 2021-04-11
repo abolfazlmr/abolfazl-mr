@@ -1,0 +1,467 @@
+$screen-xlg: 1200px
+$screen-lg: 997px
+$screen-sm: 481px
+$font-primery: 'Poppins', sans-serif
+$font-seconery: 'Dancing Script', cursi
+$color: #24d7bf
+$color-secondery: #ffffff
+$color-bg: #efefef
+
+h1
+    display: inline-block
+    font-size: 4.5rem
+    font-weight: 900
+    @media screen and ( max-width: 1400px )
+        font-size: 2.7rem
+    @media screen and ( max-width: 500px )
+        font-size: 2rem
+
+h2
+    display: inline-block
+    font-size: 2rem
+    font-weight: 700
+    @media screen and ( max-width: 500px )
+        font-size: 1.5rem
+h3
+    display: inline-block
+    font-size: 2rem
+    font-weight: 400
+    @media screen and ( max-width: 500px )
+        font-size: 1.5rem
+h4
+    display: inline-block
+    font-size: 1.3rem
+    font-weight: 700
+h5
+    display: inline-block
+    font-size: 1.3rem
+    font-weight: 400
+h6
+    display: inline-block
+    font-size: 1.2rem
+    font-weight: 500
+p
+    font-size: 1rem
+    line-height: 1.9rem
+span
+    font-weight: 500
+    font-size: 0.8rem
+.mr-title
+    font-weight: 700
+    font-size: 1.5rem
+    margin: 30px 0 15px
+    padding-bottom: 5px
+    width: fit-content
+    position: relative
+    &::after
+        content: ''
+        width: 100%
+        height: 2px
+        background: $color
+        position: absolute
+        left: 0
+        bottom: 0
+
+.cards
+    width: 100%
+    margin: 45px 0
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    .card
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding: 25px
+        width: 22%
+        border: 1px solid rgba(0,0,0,.15)
+        border-radius: 7px
+        @media screen and ( max-width: 1300px )
+            width: 48%
+            margin-top: 15px
+        .icon
+            font-size: 2rem
+        .title-icon
+            font-size: 1.5rem
+            font-weight: 700
+        .txt
+            text-align: center
+
+.pages
+    width: 60%
+    max-height: fit-content
+    overflow: hidden
+    padding: 75px 100px
+    @media screen and ( max-width: 1300px )
+        padding: 50px 75px
+    @media screen and ( max-width: 600px )
+        padding: 10px
+
+    .title
+        text-transform: capitalize
+        h2
+            &:nth-child(2)
+                color: $color
+
+.mr-btn
+    a
+        margin: 50px 0 0
+        padding: 20px 50px
+        display: inline-block
+        border-radius: 6px
+        color: $color-secondery
+        border: none
+        background-color: $color
+        position: relative
+        transition: all 0.5s
+        overflow: hidden
+        z-index: 0
+        span
+            z-index: 1
+            transition: all 0.75s
+            font-weight: 500
+        &::before
+            content: ''
+            width: 0px
+            height: 0px
+            position: absolute
+            display: block
+            background: $color-secondery
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            transition: all 0.5s
+            border-radius: 50%
+            z-index: -5
+        &:hover
+            span
+                color: black
+                z-index: 1
+            &::before
+                width: 300px
+                height: 300px
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    text-decoration: none
+    outline: none
+a
+    cursor: none
+
+body
+    background-color: $color-bg
+    font-family: $font-primery
+    max-height: 100vh
+    overflow-x: hidden
+    cursor: none
+    @media screen and ( max-width: 1200px )
+        cursor: default
+
+    &::-webkit-scrollbar
+        display: none
+    .cursor
+        width: 20px
+        height: 20px
+        background-position: center !important
+        background-size: cover !important
+        position: absolute
+        background: url(https://img.icons8.com/fluent-systems-filled/2x/4a90e2/cursor.png)
+        @media screen and ( max-width: 1200px )
+            display: none
+
+.mr-main
+    width: 100%
+    height: 100vh
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    @media screen and ( max-width: 997px )
+        margin-top: 30px
+        
+    .mr-home-img
+        width: 40%
+        height: 100%
+        display: flex
+        justify-content: center
+        position: fixed
+        @media screen and ( max-width: $screen-lg )
+            width: 100%
+            height: fit-content
+            position: static
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+            @media screen and ( max-width: $screen-lg )
+                margin: 10px
+                height: 300px
+                width: 300px
+                border-radius: 50%
+                box-shadow: 0 0 7px rgba(100px, 100px, 7px, 0.50)
+    .mr-section-home-img
+        width: 40%
+        @media screen and ( max-width: 997px )
+            display: none
+
+    .mr-home-main
+        height: 100vh
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        @media screen and ( max-width: $screen-lg )
+            width: 100%
+            height: unset
+        .mr-name
+            text-transform: capitalize
+            text-align: center
+
+            .family
+                color: $color
+
+        .mr-work
+            display: flex
+
+            .mr-works
+                width: 170px
+                margin-left: 10px
+                position: relative
+                overflow: hidden
+                @media screen and ( max-width: $screen-sm )
+                    transition: all 0.5
+                    width: 155px
+                @media screen and ( max-width: 500px )
+                    width: 135px
+
+                div
+                    position: absolute
+
+    .pages
+        @media screen and ( max-width: 995px )
+            width: 100%
+
+        .mr-work
+            display: flex
+            // flex-wrap: wrap
+            flex-direction: row
+            margin: 20px 0 10px
+
+            .mr-works
+                color: $color
+                margin-left: 10px
+                overflow: hidden
+                width: 170px
+                position: relative
+                @media screen and ( max-width: 500px )
+                    width: 135px
+                    margin-left: 0px
+                div
+                    position: absolute
+        .mr-sec-about
+            display: flex
+            flex-wrap: wrap
+
+            .describtion
+                width: 60%
+                @media screen and ( max-width: 1500px )
+                    width: 100%
+                    margin-bottom: 30px
+                .txt
+                    padding-right: 9%
+                    @media screen and ( max-width: 1500px )
+                        padding-right: 0!important
+
+            .detail
+                width: 40%
+                display: flex
+                flex-direction: column
+                div
+                    display: flex
+                    justify-content: space-between
+                    align-items: baseline
+                    flex-wrap: wrap
+                    margin: 10px 0
+                    h6
+                        color: $color
+                @media screen and ( max-width: 1500px )
+                    width: 100%
+
+        .mr-doing
+            .icon-boxs
+                display: flex
+                flex-wrap: wrap
+                .icon-box
+                    margin: 30px 0
+                    width: 50%
+                    padding-right: 30px
+                    @media screen and ( max-width: 1500px )
+                        width: 50%
+                    @media screen and ( max-width: 450px )
+                        width: 100%
+                    .icon
+                        font-size: 2rem
+                    .title-icon-box
+                        margin: 10px 0
+        .mr-interest
+            .icon
+                font-size: 2rem
+            @media screen and ( max-width: 1300px )
+                margin-top: 15px
+    .mr-reume
+        .history-work
+            margin: 20px 0
+            .row
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-between
+                border-bottom: 1px solid rgba(0,0,0,.15)
+                padding: 20px 0 60px
+                >*
+                    width: 25%
+                    @media screen and ( max-width: 767px )
+                        width: 100%
+                        margin: 25px 0
+
+        .skills-section
+            margin: 75px 0 35px
+            .skills
+                margin-top: 45px
+                display: flex
+                justify-content: space-between
+                flex-wrap: wrap
+                .skill
+                    display: flex
+                    justify-content: space-between
+                    height: 40px
+                    margin-bottom: 25px
+                    width: 45%
+                    position: relative
+                    @media screen and ( max-width: 450px )
+                        width: 100%
+
+                    &::before
+                        content: ''
+                        width: 100%
+                        height: 3px
+                        background: $color-secondery
+                        left: 0
+                        bottom: 0
+                        position: absolute
+                    &::after
+                        content: ''
+                        height: 3px
+                        background: $color
+                        left: 0
+                        bottom: 0
+                        position: absolute
+                .eight::after
+                    width: 80%
+                .six::after
+                    width: 65%
+                .nine::after
+                    width: 95%
+                .half-eight::after
+                    width: 85%
+                .seven::after
+                    width: 75%
+    .mr-portfolio
+        .portfolio-sec
+            margin-top: 65px
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+
+            .portfolio
+                width: 31%
+                height: 350px
+                margin-bottom: 25px
+                border-radius: 7px
+                overflow: hidden
+                @media screen and ( max-width: 500px )
+                    width: 99%
+
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    object-position: top
+                    transition: all 3s
+                    &:hover
+                        object-position: bottom
+
+.mr-nav
+    display: flex
+    flex-direction: column
+    position: fixed
+    top: 50%
+    left: 30px
+    transform: translate(0, -50%)
+    border: 1px solid #ffffff
+    border-radius: 5px
+    @media screen and ( max-width: $screen-xlg )
+        left: 10px
+
+    button
+        cursor: none
+        border: none
+        padding: 15px 10px
+        font-size: 1.7rem
+        background: $color-bg
+        display: flex
+        flex-direction: column
+        align-items: center
+        transition: all 0.5s
+        &:hover
+            background: $color
+            color: $color-bg
+        &:active
+            background: $color
+            color: $color-bg
+        &:focus
+            outline: none
+        &:first-child
+            border-radius: 5px 5px 0 0
+        &:last-child
+            border-radius: 0 0 5px 5px
+        span
+            margin-top: 5px
+    .active
+        background: $color
+        color: $color-bg
+    @media screen and ( max-width: 997px )
+        display: none
+        background: $color-bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100vh
+        align-items: center
+        justify-content: center
+        transform: translate(0, 0)
+        i
+            display: none
+        span
+            font-size: 35px
+        button.active
+            background: transparent
+            color: $color
+    @media screen and ( min-width: 997px )
+        display: flex!important
+        opacity: 1!important
+        transform: translate(0, -50%)!important
+        
+nav > button
+    display: none
+    position: absolute
+    z-index: 999
+    top: 30px
+    right: 30px
+    border: none
+    font-size: 30px
+    @media screen and ( max-width: 997px )
+        display: block
+        
